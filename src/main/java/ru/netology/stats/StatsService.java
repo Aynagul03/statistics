@@ -47,22 +47,22 @@ public class StatsService {
         return maxMonth + 1;
     }
 
-    public ArrayList<Integer> amountMonthslowerAverageAmount(int[] sales) {
-        ArrayList<Integer> result = new ArrayList<>();
+    public int amountMonthslowerAverageAmount(int[] sales) {
+        int result = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < 15) {
-                result.add(sales[i]);
+                result++;
             }
         }
 
         return result;
     }
 
-    public ArrayList<Integer> amountMonthsUpAverageAmount(int[] sales) {
-        ArrayList<Integer> result = new ArrayList<>();
+    public int amountMonthsUpAverageAmount(int[] sales) {
+        int result = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > 15) {
-                result.add(sales[i]);
+                result++;
             }
         }
 

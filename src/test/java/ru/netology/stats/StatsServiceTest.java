@@ -66,10 +66,10 @@ public class StatsServiceTest {
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        ArrayList<Integer> actual = manager.amountMonthslowerAverageAmount(sales);
-        List<Integer> expected = asList(8, 13, 7, 14, 14);
+        int actual = manager.amountMonthslowerAverageAmount(sales);
+        int expected = 5;
 
-        assertTrue(actual.equals(expected));
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
@@ -78,10 +78,10 @@ public class StatsServiceTest {
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        ArrayList<Integer> actual = manager.amountMonthsUpAverageAmount(sales);
-        List<Integer> expected = asList(17, 20, 19, 20, 18);
+        int actual = manager.amountMonthsUpAverageAmount(sales);
+        int expected = 5;
 
-        assertTrue(actual.equals(expected));
+        Assertions.assertEquals(expected,actual);
     }
 }
 
