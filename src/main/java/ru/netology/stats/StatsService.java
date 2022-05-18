@@ -56,7 +56,7 @@ public class StatsService {
     public int amountMonthsLowerAverageAmount(int[] sales) {
         int result = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < 15) {
+            if (sales[i] < averageAmount(sales)) {
                 result++;
             }
         }
@@ -67,7 +67,7 @@ public class StatsService {
     public int amountMonthsUpAverageAmount(int[] sales) {
         int result = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > 15) {
+            if (sales[i] > averageAmount(sales)) {
                 result++;
             }
         }
