@@ -11,7 +11,7 @@ public class StatsServiceTest {
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int actual = manager.Sum(sales);
+        int actual = manager.sum(sales);
         int expected = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18;
 
         Assertions.assertEquals(expected, actual);
@@ -23,19 +23,19 @@ public class StatsServiceTest {
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int actual = manager.MinSales(sales);
+        int actual = manager.minSales(sales);
         int expected = 9;
 
         Assertions.assertEquals(expected, actual);
         }
 
     @Test
-    public void AverageAmount() {
+    public void averageAmount() {
         StatsService manager = new StatsService();
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int actual = manager.AverageAmount(sales);
+        int actual = manager.averageAmount(sales);
         int expected = 15;
 
         Assertions.assertEquals(expected, actual);
@@ -47,19 +47,19 @@ public class StatsServiceTest {
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int actual = manager.MaxSales(sales);
+        int actual = manager.maxSales(sales);
         int expected = 8;
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void amountMonthslowerAverageAmount() {
+    public void amountMonthsLowerAverageAmount() {
         StatsService manager = new StatsService();
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int actual = manager.amountMonthslowerAverageAmount(sales);
+        int actual = manager.amountMonthsLowerAverageAmount(sales);
         int expected = 5;
 
         Assertions.assertEquals(expected,actual);

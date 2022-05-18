@@ -1,6 +1,6 @@
 package ru.netology.stats;
 public class StatsService {
-    public int Sum(int[] sales) {
+    public int sum(int[] sales) {
         int sum = 0;
         for (int sale : sales) {
             sum += sale;
@@ -8,7 +8,7 @@ public class StatsService {
         return sum;
     }
 
-    public int MinSales(int[] sales) {
+    public int minSales(int[] sales) {
         int minMonth = 0;
         int month = 0; // переменная для индекса рассматриваемого месяца в массиве
         for (long sale : sales) {
@@ -23,14 +23,14 @@ public class StatsService {
     }
 
 
-    public int AverageAmount(int[] sales) {
+    public int averageAmount(int[] sales) {
         int months = 12;
         int sumSales = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18;
         int averageAmount = sumSales / months;
         return averageAmount;
     }
 
-    public int MaxSales(int[] sales) {
+    public int maxSales(int[] sales) {
         int maxMonth = 0;
         int month = 0; // переменная для индекса рассматриваемого месяца в массиве
         for (long sale : sales) {
@@ -44,7 +44,7 @@ public class StatsService {
         return maxMonth + 1;
     }
 
-    public int amountMonthslowerAverageAmount(int[] sales) {
+    public int amountMonthsLowerAverageAmount(int[] sales) {
         int result = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < 15) {
