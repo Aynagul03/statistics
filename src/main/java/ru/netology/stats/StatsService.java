@@ -1,4 +1,7 @@
 package ru.netology.stats;
+
+import java.io.OptionalDataException;
+
 public class StatsService {
     public int sum(int[] sales) {
         int sum = 0;
@@ -24,10 +27,16 @@ public class StatsService {
 
 
     public int averageAmount(int[] sales) {
-        int months = 12;
-        int sumSales = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18;
-        int averageAmount = sumSales / months;
-        return averageAmount;
+        if (sales.length == 0) {
+            return 0;
+        }
+
+        int result = 0;
+        for (int i = 0; i < sales.length; i++) {
+            result += sales[i];
+        }
+
+        return result / sales.length;
     }
 
     public int maxSales(int[] sales) {
