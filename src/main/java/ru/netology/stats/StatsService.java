@@ -1,7 +1,4 @@
 package ru.netology.stats;
-
-import java.util.ArrayList;
-
 public class StatsService {
     public int Sum(int[] sales) {
         int sum = 0;
